@@ -2,7 +2,12 @@ public class Bike {
 
     private String bikeColour;
     private int bikeID;
-    private int bikeSpeed;
+
+    Bike()
+    {
+        bikeColour = "Red";
+        bikeID = 1;
+    }
 
     public int getBikeID() {
         return bikeID;
@@ -17,7 +22,7 @@ public class Bike {
         return bikeColour;
     }
 
-    public void setBikeColour(String bikeColour) {
+    void setBikeColour(String bikeColour) {
         //sets the bikeColour equal to the playerColour
         this.bikeColour = bikeColour;
     }
