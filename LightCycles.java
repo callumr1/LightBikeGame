@@ -7,6 +7,8 @@ public class LightCycles {
     private static Player Player1 = new Player();
     private static Grid GameGrid = new Grid();
     private static Bike PlayerBike = new Bike();
+
+
     public static void main(String args[])
     {
 
@@ -15,6 +17,7 @@ public class LightCycles {
         System.out.println("1 - Change your Name");
         System.out.println("2 - Change your Colour");
         System.out.println("3 - Change the size of the Grid");
+        System.out.println("4 - Change the Controls");
         Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
         if (choice == 1)
@@ -32,6 +35,11 @@ public class LightCycles {
         {
             //Allow the user to change the size of the grid
             setGridSize();
+        }
+
+        if (choice == 4)
+        {
+            setPlayerControls();
         }
     }
 
@@ -61,11 +69,45 @@ public class LightCycles {
         Scanner h = new Scanner(System.in);
         System.out.print("Enter the Height of the grid >>> ");
         int newHeight = h.nextInt();
+
         Scanner w = new Scanner(System.in);
         System.out.print("Enter the Width of the grid >>> ");
         int newWidth = w.nextInt();
         GameGrid.setHeight(newHeight);
         GameGrid.setWidth(newWidth);
 
+    }
+
+    private static void setPlayerControls()
+    {
+        //Prompt the user for their new controls
+
+        //Prompts the user what they would like to change speed up to
+        Scanner up = new Scanner(System.in);
+        System.out.print("What would you like to change Speed Up to >>> ");
+        char newSpeedUp = up.nextLine().charAt(0);
+
+        //Prompts the user what they would like to change slow down to
+        Scanner down = new Scanner(System.in);
+        System.out.print("What would you like to change Slow Down to >>> ");
+        char newSpeedDown = down.nextLine().charAt(0);
+
+        //Prompts the user what they would like to change move left to
+        Scanner left = new Scanner(System.in);
+        System.out.print("What would you like to change Move Left to >>> ");
+        char newMoveLeft = left.nextLine().charAt(0);
+
+        //Prompts the user what they would like to change move right to
+        Scanner right = new Scanner(System.in);
+        System.out.print("What would you like to change Move Right to >>> ");
+        char newMoveRight = right.nextLine().charAt(0);
+        
+        //Prompts the user what they would like to change the jetwall toggle to
+        Scanner jet = new Scanner(System.in);
+        System.out.print("What would you like to change Move Right to >>> ");
+        char newJetWall = jet.nextLine().charAt(0);
+
+        //Changes the players specific controls
+        Player1.setPlayerControls(newSpeedUp, newSpeedDown, newMoveLeft, newMoveRight, newJetWall);
     }
 }
