@@ -17,6 +17,7 @@ public class Grid {
     void setWidth(int width) {
         //Allows the user to change the width of the grid
         this.width = width;
+        System.out.println("The width of the Grid is now set to " + width);
     }
 
     public int getWidth() {
@@ -26,6 +27,7 @@ public class Grid {
     void setHeight(int height) {
         //Allows the user to change the height of the grid
         this.height = height;
+        System.out.println("The height of the Grid is now set to " + height);
     }
 
     public int getHeight() {
@@ -36,8 +38,9 @@ public class Grid {
         //displays the GUI for the grid
     }
 
-    public void setMaxPlayers(int maxPlayers) {
+    void setMaxPlayers(int maxPlayers) {
         this.maxPlayers = maxPlayers;
+        System.out.println("The maximum number of players is now set to " + maxPlayers);
     }
 
     public int getMaxPlayers() {

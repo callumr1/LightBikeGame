@@ -9,35 +9,50 @@ public class LightCycles {
 
     public static void main(String args[])
     {
-
         System.out.println("Welcome to LightCycles!");
-        System.out.println("Choose from one of the following");
-        System.out.println("1 - Change your Name");
-        System.out.println("2 - Change your Colour");
-        System.out.println("3 - Change the size of the Grid");
-        System.out.println("4 - Change the Controls");
-        Scanner in = new Scanner(System.in);
-        int choice = in.nextInt();
-        if (choice == 1)
+        String menu ="\nChoose from one of the following: \n" +
+                "1 - Change your Name \n" +
+                "2 - Change your Colour \n" +
+                "3 - Change the size of the Grid \n" +
+                "4 - Change the Controls \n" +
+                "5 - Change the Player Limit \n" +
+                "6 - Quit Light Cycles";
+        int choice = 0;
+        while (choice != 6)
         {
-            //Allow the user to set their new name
-            setPlayerName();
-        }
-        if (choice == 2)
-        {
-            //Allow the user to set their new colour
-            setPlayerColour();
-        }
+            //Loops through the menu while the users choice is not 6
+            System.out.println(menu);
+            Scanner in = new Scanner(System.in);
+            choice = in.nextInt();
+            if (choice == 1) {
+                //Allow the user to set their new name
+                setPlayerName();
+            }
+            if (choice == 2) {
+                //Allow the user to set their new colour
+                setPlayerColour();
+            }
 
-        if (choice == 3)
-        {
-            //Allow the user to change the size of the grid
-            setGridSize();
-        }
+            if (choice == 3) {
+                //Allow the user to change the size of the grid
+                setGridSize();
+            }
 
-        if (choice == 4)
-        {
-            setPlayerControls();
+            if (choice == 4) {
+                //Allow the user to change their controls
+                setPlayerControls();
+            }
+
+            if (choice == 5) {
+                //Allow the user to change the maximum number of players allowed to play (under 20)
+                setPlayerLimit();
+            }
+
+            if (choice == 6)
+            {
+                //Quits the game
+                System.out.println("Thanks for playing Light Cycles");
+            }
         }
     }
 
@@ -109,7 +124,8 @@ public class LightCycles {
         Player1.setPlayerControls(newSpeedUp, newSpeedDown, newMoveLeft, newMoveRight, newJetWall);
     }
 
-    private static void setPlayerLimit(){
+    private static void setPlayerLimit()
+    {
         //Prompt the user for the maximum number of players that can join the game
         Scanner max = new Scanner(System.in);
         System.out.println("What would you like to set the maximum number of players to (it has to be less than 20) >>> ");

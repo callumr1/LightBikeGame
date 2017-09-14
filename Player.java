@@ -55,7 +55,7 @@ public class Player {
         System.out.println("You have changed your colour to " + this.playerColour);
     }
 
-    public void setPlayerControls(char moveUp, char moveDown, char moveLeft, char moveRight, char jetWall){
+    void setPlayerControls(char moveUp, char moveDown, char moveLeft, char moveRight, char jetWall){
         //Allow the player to change their controls
         this.speedUp = moveUp;
         System.out.println("Speed up is now set to " + moveUp);
