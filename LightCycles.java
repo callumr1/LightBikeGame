@@ -1,5 +1,3 @@
-import javafx.scene.effect.Light;
-
 import java.util.Scanner;
 
 public class LightCycles {
@@ -101,7 +99,7 @@ public class LightCycles {
         Scanner right = new Scanner(System.in);
         System.out.print("What would you like to change Move Right to >>> ");
         char newMoveRight = right.nextLine().charAt(0);
-        
+
         //Prompts the user what they would like to change the jetwall toggle to
         Scanner jet = new Scanner(System.in);
         System.out.print("What would you like to change Move Right to >>> ");
@@ -109,5 +107,22 @@ public class LightCycles {
 
         //Changes the players specific controls
         Player1.setPlayerControls(newSpeedUp, newSpeedDown, newMoveLeft, newMoveRight, newJetWall);
+    }
+
+    private static void setPlayerLimit(){
+        //Prompt the user for the maximum number of players that can join the game
+        Scanner max = new Scanner(System.in);
+        System.out.println("What would you like to set the maximum number of players to (it has to be less than 20) >>> ");
+        int newMaxPlayers = max.nextInt();
+
+        //Prompts the user for a new number while their input is greater than 20
+        while (newMaxPlayers > 20)
+        {
+            System.out.println("The maximum number of players has to be less than 20");
+            Scanner m = new Scanner(System.in);
+            System.out.println("What would you like to set the maximum number of players to >>> ");
+            newMaxPlayers = m.nextInt();
+        }
+        GameGrid.setMaxPlayers(newMaxPlayers);
     }
 }

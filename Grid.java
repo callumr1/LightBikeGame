@@ -4,10 +4,14 @@ public class Grid {
 
     private int width;
     private int height;
+    private int maxPlayers;
+    private int minPlayers;
 
     Grid(){
-        width = 20;
-        height = 20;
+        width = 500;
+        height = 500;
+        maxPlayers = 20;
+        minPlayers = 3;
     }
 
     void setWidth(int width) {
@@ -30,5 +34,21 @@ public class Grid {
 
     public void displayGrid(int width, int height){
         //displays the GUI for the grid
+    }
+
+    public void setMaxPlayers(int maxPlayers) {
+        this.maxPlayers = maxPlayers;
+    }
+
+    public int getMaxPlayers() {
+        return maxPlayers;
+    }
+
+    public void setMinPlayers(int minPlayers) {
+        this.minPlayers = minPlayers;
+    }
+
+    public int getMinPlayers() {
+        return minPlayers;
     }
 }
