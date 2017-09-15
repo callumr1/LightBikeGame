@@ -13,6 +13,6 @@ User Stories
 10. As a user, I would like a clean and easy to use menu, so I am not confused as to how to use the application. Estimate: 1 day. Priority: High.
 
 Spike User Stories
-1. As a user, I want to be be able to connect to a server that maintains the game state and user information, to allow me to easily play the game. Estimate: 4 days. Priority: High
-2. As a user, I should be able to send a request to the server to add/remove a user from the game and receive either confirmation that it worked, or the reason why it failed, so that I can know if the request was successful or not. Estimate: 3 days Priority: High
-3. As a user, I should be able to request the game state from the server and receive either, IDLE, WAITING FOR USERS, PLAYING, or GAME OVER winner. Estimate: 3 days Priority: High
+1. As a user, I want to be be able to connect to a server that maintains the game state and user information, to allow me to easily play the game. Priority: High
+2. As a user, I should be able to send a request to the server to add/remove a user from the game and receive either confirmation that it worked, or the reason why it failed, so that I can know if the request was successful or not. Priority: High
+3. As a user, I should be able to request the game state from the server and receive either, IDLE, WAITING FOR USERS, PLAYING, or GAME OVER winner. Priority: High
