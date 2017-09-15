@@ -1,3 +1,4 @@
+//GitHub Repository: https://github.com/callumr1/CP2406-Assignment1
 import java.util.Scanner;
 
 public class LightCycles {
