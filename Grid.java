@@ -17,6 +17,8 @@ public class Grid extends JPanel implements ActionListener {
     private final int total_dots = 2500;
     private int x[] = new int[total_dots];
     private int y[] = new int[total_dots];
+    private int trailX[] = new int[total_dots];
+    private int trailY[] = new int[total_dots];
     private int dots;
     private int DELAY = 140;
     private Color playerColour = Color.RED;
@@ -68,10 +70,6 @@ public class Grid extends JPanel implements ActionListener {
                 //draw the bike
                 bike.setColor(playerColour);
                 bike.fillRect(x[z], y[z], 10, 10);
-                /*Graphics2D bikeOutline = (java.awt.Graphics2D) bike.create();
-                bikeOutline.setColor(Color.BLACK);
-                bikeOutline.setStroke(new java.awt.BasicStroke(3));
-                bikeOutline.drawRect(x[z], y[z], 10, 10);*/
             }
             else {
                 //draw trail
@@ -108,6 +106,14 @@ public class Grid extends JPanel implements ActionListener {
             y[z] = y[(z - 1)];
         }
 
+        //remembers where the trail is so that collisions can be done
+        for (int i = 0; i < 500; i++){
+            trailX[i] = x[0];
+            trailY[i] = y[0];
+            System.out.println("x" + trailX[i] + "y" + trailY[i]);
+        }
+
+
         if (leftDirection) {
             x[0] -= dot_size;
         }
@@ -127,11 +133,14 @@ public class Grid extends JPanel implements ActionListener {
 
     private void checkCollision() {
 
-
-
         for (int z = gridWidth; z > 0; z--) {
             //System.out.println(z);
             if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
+                inGame = false;
+            }
+        }
+        for (int i = 0; i < 500; i++){
+            if ((trailX[i] == x[0]) && (trailY[i] == y[0])){
                 inGame = false;
             }
         }
