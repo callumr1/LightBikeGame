@@ -1,16 +1,243 @@
-public class Grid {
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
-    private int width;
-    private int height;
+public class Grid extends JPanel implements ActionListener {
+
+    private int width = 550;
+    private int height = 550;
+    private int gridHeight = 500;
+    private int gridWidth = 500;
     private int maxPlayers;
     private int minPlayers;
+    private final int dot_size = 10;
+    private final int total_dots = 2500;
+    private int x[] = new int[total_dots];
+    private int y[] = new int[total_dots];
+    private int dots;
+    private int DELAY = 140;
+    private Color playerColour = Color.RED;
+
+    private boolean leftDirection = false;
+    private boolean rightDirection = true;
+    private boolean upDirection = false;
+    private boolean downDirection = false;
+    private boolean inGame = true;
+    private boolean boostOn = false;
+    private Timer timer;
 
     Grid(){
-        width = 500;
-        height = 500;
         maxPlayers = 20;
         minPlayers = 3;
+        addKeyListener(new TAdapter());
+        setFocusable(true);
+        setPreferredSize(new Dimension(width, height));
+        //startGame();
     }
+
+    void startGame(){
+        dots = 3;
+        for (int z = 0; z < dots; z++) {
+            x[z] = 50 - z * 10;
+            y[z] = 50;
+        }
+
+        timer = new Timer(DELAY, this);
+        timer.start();
+
+    }
+
+    @Override
+    public void paintComponent(Graphics g){
+        if (inGame) {
+            paintGrid(g);
+            paintBike(g);
+        }
+        else{
+            gameOver(g);
+        }
+    }
+
+    private void paintBike(Graphics bike) {
+
+        for (int z = 0; z < dots; z++) {
+            if (z == 0) {
+                //draw the bike
+                bike.setColor(playerColour);
+                bike.fillRect(x[z], y[z], 10, 10);
+                /*Graphics2D bikeOutline = (java.awt.Graphics2D) bike.create();
+                bikeOutline.setColor(Color.BLACK);
+                bikeOutline.setStroke(new java.awt.BasicStroke(3));
+                bikeOutline.drawRect(x[z], y[z], 10, 10);*/
+            }
+            else {
+                //draw trail
+                bike.setColor(playerColour);
+                bike.fillRect(x[z], y[z], 10, 10);
+            }
+        }
+
+    }
+
+    private void paintGrid(Graphics g) {
+        //draws the grid
+        g.setColor(Color.WHITE);
+        for (int x = 10; x <= gridHeight; x += 10)
+            for (int y = 10; y <= gridWidth; y += 10)
+                g.drawRect(x, y, 10, 10);
+    }
+
+    private void gameOver(Graphics g) {
+        //Displays "Game Over"
+        String msg = "Game Over";
+        Font small = new Font("Helvetica", Font.BOLD, 30);
+        FontMetrics metr = getFontMetrics(small);
+
+        g.setColor(Color.white);
+        g.setFont(small);
+        g.drawString(msg, (width - metr.stringWidth(msg)) / 2, height / 2);
+    }
+
+    private void move() {
+
+        for (int z = dots; z > 0; z--) {
+            x[z] = x[(z - 1)];
+            y[z] = y[(z - 1)];
+        }
+
+        if (leftDirection) {
+            x[0] -= dot_size;
+        }
+
+        if (rightDirection) {
+            x[0] += dot_size;
+        }
+
+        if (upDirection) {
+            y[0] -= dot_size;
+        }
+
+        if (downDirection) {
+            y[0] += dot_size;
+        }
+    }
+
+    private void checkCollision() {
+
+
+
+        for (int z = gridWidth; z > 0; z--) {
+            //System.out.println(z);
+            if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
+                inGame = false;
+            }
+        }
+
+       /* for (int i = 0; i < 500; i += 10){
+            System.out.println(x[i]);
+            System.out.println(x[0]);
+            if ((x[i] == x[0]) && (y[i] == y[0]))
+                inGame = false;
+        }*/
+
+        /*for (int z = dots; z < y.length; z++){
+            if ((z > 4) && (y[z] == y[0]))
+                inGame = false;
+        }*/
+
+        if (y[0] >= gridHeight) {
+            inGame = false;
+        }
+
+        if (y[0] < 20) {
+            inGame = false;
+        }
+
+        if (x[0] >= gridWidth) {
+            inGame = false;
+        }
+
+        if (x[0] < 20) {
+            inGame = false;
+        }
+
+        if(!inGame) {
+            timer.stop();
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (inGame) {
+            checkCollision();
+            move();
+        }
+        revalidate();
+        repaint();
+    }
+
+    private class TAdapter extends KeyAdapter {
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        //checks to see which key has been pressed, and does not let the bike "back track on itself"
+
+        int key = e.getKeyCode();
+
+        if ((key == KeyEvent.VK_LEFT) && (!rightDirection)) {
+            //left key
+            leftDirection = true;
+            upDirection = false;
+            downDirection = false;
+        }
+
+        if ((key == KeyEvent.VK_RIGHT) && (!leftDirection)) {
+            //right key
+            rightDirection = true;
+            upDirection = false;
+            downDirection = false;
+        }
+
+        if ((key == KeyEvent.VK_UP) && (!downDirection)) {
+            //up key
+            upDirection = true;
+            rightDirection = false;
+            leftDirection = false;
+        }
+
+        if ((key == KeyEvent.VK_DOWN) && (!upDirection)) {
+            //down key
+            downDirection = true;
+            rightDirection = false;
+            leftDirection = false;
+        }
+
+        if (key == KeyEvent.VK_SPACE) {
+            //speeds up the bike
+            System.out.print("Space");
+            if (boostOn){
+                DELAY = 140;
+                timer.setDelay(DELAY);
+                boostOn = false;
+            }
+            else {
+                DELAY = 70;
+                timer.setDelay(DELAY);
+                boostOn = true;
+            }
+        }
+        }
+    }
+
+    void setPlayerColour(Color colour){
+        //Allows the user to change the colour of their bike
+        this.playerColour = colour;
+    }
+
 
     void setWidth(int width) {
         //Allows the user to change the width of the grid
@@ -30,10 +257,6 @@ public class Grid {
 
     public int getHeight() {
         return height;
-    }
-
-    public void displayGrid(int width, int height){
-        //displays the GUI for the grid
     }
 
     void setMaxPlayers(int maxPlayers) {

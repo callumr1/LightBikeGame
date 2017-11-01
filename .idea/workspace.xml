@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcfefd38-0084-4f01-b35b-7d773ac024f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CP2406-Assignment1/Grid.class" afterPath="$PROJECT_DIR$/out/production/CP2406-Assignment1/Grid.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CP2406-Assignment1/LightCycles.class" afterPath="$PROJECT_DIR$/out/production/CP2406-Assignment1/LightCycles.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Grid.java" afterPath="$PROJECT_DIR$/Grid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LightCycles.java" afterPath="$PROJECT_DIR$/LightCycles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CP2406-Assignment1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/CP2406-Assignment1/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CP2406-Assignment1/Class Diagram" afterPath="$PROJECT_DIR$/out/production/CP2406-Assignment1/Class Diagram" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CP2406-Assignment1/README.md" afterPath="$PROJECT_DIR$/out/production/CP2406-Assignment1/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,18 +21,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LightCycles.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LightCycles.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LightCycles.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="67" lean-forward="false" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
+              <caret line="212" column="4" lean-forward="false" selection-start-line="212" selection-start-column="4" selection-end-line="212" selection-end-column="4" />
               <folding>
                 <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
                 <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
                 <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
                 <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-                <element signature="e#3194#3234#0" expanded="false" />
                 <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+                <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -35,8 +41,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding>
                 <element signature="method#Player#0;class#Player#0" expanded="false" />
                 <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
@@ -47,15 +53,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="433">
+              <caret line="278" column="0" lean-forward="false" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
               <folding>
-                <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
-                <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
-                <element signature="method#displayGrid#0;class#Grid#0" expanded="false" />
                 <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
               </folding>
             </state>
@@ -98,19 +101,32 @@
       <list>
         <option value="$PROJECT_DIR$/Bike.java" />
         <option value="$PROJECT_DIR$/Player.java" />
-        <option value="$PROJECT_DIR$/Grid.java" />
+        <option value="$PROJECT_DIR$/MosaicPanel.java" />
+        <option value="$PROJECT_DIR$/lib/MosaicPanel.java" />
+        <option value="$PROJECT_DIR$/lib/TronPanel.java" />
+        <option value="$PROJECT_DIR$/lib/Game.java" />
+        <option value="$PROJECT_DIR$/lib/Grids.java" />
         <option value="$PROJECT_DIR$/LightCycles.java" />
+        <option value="$PROJECT_DIR$/Grid.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="633" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="654" />
     <option name="height" value="687" />
   </component>
@@ -140,15 +156,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Cp2406 - Programming 2 Github/Programming-2/Prac 6" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -165,6 +181,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.LightCycles">
+    <configuration name="DrawGrids" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="lib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="lib.DrawGrids" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CP2406-Assignment1" />
+      <envs />
+    </configuration>
     <configuration name="LightCycles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="LightCycles" />
@@ -260,9 +295,14 @@
       <properties />
       <listeners />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.LightCycles" />
+      <item index="1" class="java.lang.String" itemvalue="Application.DrawGrids" />
+    </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.LightCycles" />
+        <item index="1" class="java.lang.String" itemvalue="Application.DrawGrids" />
       </list>
     </recent_temporary>
   </component>
@@ -281,14 +321,24 @@
       <workItem from="1505430211454" duration="30000" />
       <workItem from="1505431391653" duration="2886000" />
       <workItem from="1505465137918" duration="37000" />
+      <workItem from="1506035072961" duration="1656000" />
+      <workItem from="1506640093110" duration="39000" />
+      <workItem from="1508135361799" duration="4816000" />
+      <workItem from="1508226995854" duration="1895000" />
+      <workItem from="1508454799060" duration="16916000" />
+      <workItem from="1508723257496" duration="9256000" />
+      <workItem from="1508829094771" duration="1716000" />
+      <workItem from="1509412261205" duration="4940000" />
+      <workItem from="1509499477893" duration="625000" />
+      <workItem from="1509500284058" duration="94000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16172000" />
+    <option name="totallyTimeSpent" value="58125000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="696" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -299,11 +349,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -317,7 +367,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +385,206 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/LightCycles.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="method#Bike#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeID#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeColour#0;class#Bike#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightCycles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="method#Bike#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeID#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeColour#0;class#Bike#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightCycles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="method#Bike#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeID#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeColour#0;class#Bike#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightCycles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="method#Bike#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeID#0;class#Bike#0" expanded="false" />
+            <element signature="method#setBikeColour#0;class#Bike#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightCycles.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
@@ -342,8 +592,8 @@
             <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="e#3194#3234#0" expanded="false" />
             <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -378,9 +628,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
-            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
-            <element signature="method#displayGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -395,8 +642,8 @@
             <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="e#3194#3234#0" expanded="false" />
             <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -419,9 +666,6 @@
         <state relative-caret-position="629">
           <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding>
-            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
-            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
-            <element signature="method#displayGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -448,8 +692,8 @@
             <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="e#3194#3234#0" expanded="false" />
             <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -459,9 +703,6 @@
         <state relative-caret-position="561">
           <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding>
-            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
-            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
-            <element signature="method#displayGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -501,8 +742,8 @@
             <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="e#3194#3234#0" expanded="false" />
             <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -512,9 +753,6 @@
         <state relative-caret-position="527">
           <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding>
-            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
-            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
-            <element signature="method#displayGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -545,19 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Bike.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -570,30 +795,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Grid.java">
+    <entry file="file://$PROJECT_DIR$/CP2406-Assignment1.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicPanel.java" />
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u112b287.2_windows_x64/jre/lib/rt.jar!/javax/swing/JComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/MosaicPanel.java" />
+    <entry file="file://$PROJECT_DIR$/lib/TronPanel.java" />
+    <entry file="file://$PROJECT_DIR$/lib/Game.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Tron.zip/Tron/Animation.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Tron.zip/Tron/Core.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Tron.zip/Tron/yourclass.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Tron.zip/Tron/ScreenManager.java" />
+    <entry file="file://$PROJECT_DIR$/lib/Grids.java" />
+    <entry file="file://$PROJECT_DIR$/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
-            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
-            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
-            <element signature="method#displayGrid#0;class#Grid#0" expanded="false" />
-            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instructions.jpg" />
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u112b287.2_windows_x64/jre/lib/rt.jar!/javax/swing/Timer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LightCycles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="67" lean-forward="false" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
+          <caret line="212" column="4" lean-forward="false" selection-start-line="212" selection-start-column="4" selection-end-line="212" selection-end-column="4" />
           <folding>
             <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
             <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="e#3194#3234#0" expanded="false" />
             <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
+            <marker date="1508830780934" expanded="true" signature="5562:5568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Light Cycles/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3570">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="278" column="0" lean-forward="false" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+          <folding>
+            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,6 +888,17 @@
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

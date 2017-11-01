@@ -1,15 +1,60 @@
 //GitHub Repository: https://github.com/callumr1/CP2406-Assignment1
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import java.awt.EventQueue;
+import javax.swing.border.*;
 
-public class LightCycles {
+public class LightCycles extends JFrame implements ActionListener {
 
     private static Player Player1 = new Player();
     private static Grid GameGrid = new Grid();
     private static Bike PlayerBike = new Bike();
+    private JButton playGame = new JButton("Play Game");
+    private JButton exitGame = new JButton("Exit");
+    private JButton red = new JButton("     ");
+    private JButton blue = new JButton("     ");
+    private JButton green = new JButton("     ");
+    private JButton yellow = new JButton("     ");
+    private final static String MENU = "Main Menu";
+    private final static String OPTIONS = "Options";
 
-
-    public static void main(String args[])
+    private LightCycles()
     {
+        playGame.addActionListener(this);
+        exitGame.addActionListener(this);
+
+        red.setBackground(Color.RED);
+        red.addActionListener(this);
+
+        blue.setBackground(Color.BLUE);
+        blue.addActionListener(this);
+
+        green.setBackground(Color.GREEN);
+        green.addActionListener(this);
+
+        yellow.setBackground(Color.YELLOW);
+        yellow.addActionListener(this);
+    }
+
+    public static void main(String args[]) throws IOException {
+        //Create and set up the content pane
+        LightCycles mainFrame = new LightCycles();
+        mainFrame.setSize(500, 200);
+        mainFrame.addComponentToPane(mainFrame.getContentPane());
+        mainFrame.pack();
+        mainFrame.setVisible(true);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLocationRelativeTo(null);
+
+
         System.out.println("Welcome to LightCycles!");
         String menu ="\nChoose from one of the following: \n" +
                 "1 - Change your Name \n" +
@@ -55,6 +100,78 @@ public class LightCycles {
                 System.out.println("Thanks for playing Light Cycles");
             }
         }
+    }
+
+    private void addComponentToPane(Container pane) throws IOException {
+        BufferedImage img = ImageIO.read(new File("instructions.jpg"));
+        Image dimg = img.getScaledInstance(300, 200, Image.SCALE_SMOOTH);
+        JLabel instuctions = new JLabel(new ImageIcon(dimg));
+        instuctions.setSize(500, 200);
+        JTabbedPane tabbedpane = new JTabbedPane();
+
+        //creates the cards
+        JPanel menu = new JPanel();
+        menu.setBackground(Color.BLACK);
+        menu.setPreferredSize(super.getSize());
+        menu.add(playGame);
+        menu.add(exitGame);
+
+        JPanel options = new JPanel();
+        options.add(new JLabel("Pick your Bike Colour:"));
+        options.add(red);
+        options.add(blue);
+        options.add(green);
+        options.add(yellow);
+        options.add(instuctions);
+
+
+        tabbedpane.addTab(MENU, menu);
+        tabbedpane.addTab(OPTIONS, options);
+
+        pane.add(tabbedpane, BorderLayout.CENTER);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+        Object source = e.getSource();
+        if(source == exitGame) {
+            System.exit(0);
+        }
+        else if(source == playGame){
+            //loads the light cycles game
+            startGame();
+        }
+
+        else if(source == red){
+            GameGrid.setPlayerColour(red.getBackground());
+        }
+
+        else if(source == blue){
+            GameGrid.setPlayerColour(blue.getBackground());
+        }
+
+        else if(source == green){
+            GameGrid.setPlayerColour(green.getBackground());
+        }
+
+        else if(source == yellow){
+            GameGrid.setPlayerColour(yellow.getBackground());
+        }
+
+    }
+
+    private static void startGame(){
+        JFrame gameFrame = new JFrame();
+        gameFrame.setSize(550, 600);
+        gameFrame.setVisible(true);
+        gameFrame.add(GameGrid, BorderLayout.CENTER);
+        gameFrame.setBackground(Color.BLACK);
+
+        gameFrame.setResizable(false);
+
+        gameFrame.setTitle("LightCycles");
+        gameFrame.setLocationRelativeTo(null);
+        GameGrid.startGame();
     }
 
     private static void setPlayerName()
