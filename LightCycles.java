@@ -9,8 +9,6 @@ import java.awt.event.*;
 import java.awt.*;
 import java.awt.Image;
 import javax.swing.ImageIcon;
-import java.awt.EventQueue;
-import javax.swing.border.*;
 
 public class LightCycles extends JFrame implements ActionListener {
 
@@ -25,6 +23,9 @@ public class LightCycles extends JFrame implements ActionListener {
     private JButton yellow = new JButton("     ");
     private final static String MENU = "Main Menu";
     private final static String OPTIONS = "Options";
+    private final static String INSTRUCTIONS = "Instructions";
+    private final Font bigFont = new Font("Arial", Font.PLAIN, 30);
+    private final Font smallFont = new Font("Calibri", Font.BOLD, 15);
 
     private LightCycles()
     {
@@ -47,7 +48,7 @@ public class LightCycles extends JFrame implements ActionListener {
     public static void main(String args[]) throws IOException {
         //Create and set up the content pane
         LightCycles mainFrame = new LightCycles();
-        mainFrame.setSize(500, 200);
+        mainFrame.setSize(500, 300);
         mainFrame.addComponentToPane(mainFrame.getContentPane());
         mainFrame.pack();
         mainFrame.setVisible(true);
@@ -103,30 +104,65 @@ public class LightCycles extends JFrame implements ActionListener {
     }
 
     private void addComponentToPane(Container pane) throws IOException {
+        //creating the instructions image
         BufferedImage img = ImageIO.read(new File("instructions.jpg"));
-        Image dimg = img.getScaledInstance(300, 200, Image.SCALE_SMOOTH);
-        JLabel instuctions = new JLabel(new ImageIcon(dimg));
-        instuctions.setSize(500, 200);
+        Image dimg = img.getScaledInstance(500, 300, Image.SCALE_SMOOTH);
+        JLabel instruct = new JLabel(new ImageIcon(dimg));
+        instruct.setSize(500, 300);
+
+        BufferedImage img2 = ImageIO.read(new File("title.PNG"));
+        Image aimg = img2.getScaledInstance(300, 80, Image.SCALE_SMOOTH);
+        JLabel title = new JLabel(new ImageIcon(aimg));
+        instruct.setSize(300, 80);
+
+        //creates the tabbed pane which everything will be on
         JTabbedPane tabbedpane = new JTabbedPane();
 
-        //creates the cards
+        //creates the menu card
         JPanel menu = new JPanel();
+        menu.setLayout(new BoxLayout(menu, BoxLayout.PAGE_AXIS));
         menu.setBackground(Color.BLACK);
         menu.setPreferredSize(super.getSize());
+        playGame.setAlignmentX(Component.CENTER_ALIGNMENT);
+        playGame.setFont(bigFont);
+        exitGame.setAlignmentX(Component.CENTER_ALIGNMENT);
+        exitGame.setFont(bigFont);
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        menu.add(title);
+        menu.add(Box.createRigidArea(new Dimension(0,20))); //adds space between the buttons
         menu.add(playGame);
+        menu.add(Box.createRigidArea(new Dimension(0,40)));
         menu.add(exitGame);
 
+        //creates the options card
         JPanel options = new JPanel();
-        options.add(new JLabel("Pick your Bike Colour:"));
-        options.add(red);
-        options.add(blue);
-        options.add(green);
-        options.add(yellow);
-        options.add(instuctions);
+        options.setBackground(Color.BLACK);
+        Container con = new Container();
+        Container colourCon = new Container();
+        con.setLayout(new BoxLayout(con, BoxLayout.PAGE_AXIS));
+        colourCon.setLayout(new FlowLayout());
+        options.add(con);
+        con.add(colourCon);
 
+        JLabel colourLabel = new JLabel(("Pick your Bike Colour:"));
+        colourLabel.setFont(smallFont);
+        colourLabel.setForeground(Color.WHITE);
+        colourCon.add(colourLabel);
+        colourCon.add(red);
+        colourCon.add(blue);
+        colourCon.add(green);
+        colourCon.add(yellow);
 
+        //creates the instructions card
+        JPanel instructions = new JPanel();
+        instructions.add(instruct);
+        instructions.setBackground(Color.BLACK);
+
+        //adds the cards as tabs to the tabbedpane
         tabbedpane.addTab(MENU, menu);
         tabbedpane.addTab(OPTIONS, options);
+        tabbedpane.addTab(INSTRUCTIONS, instructions);
 
         pane.add(tabbedpane, BorderLayout.CENTER);
     }
@@ -142,6 +178,7 @@ public class LightCycles extends JFrame implements ActionListener {
             startGame();
         }
 
+        //lets the user change the colour of their bike
         else if(source == red){
             GameGrid.setPlayerColour(red.getBackground());
         }
