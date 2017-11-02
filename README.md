@@ -9,6 +9,7 @@ User Stories
 7. As a user, I would like a clean and easy to use menu, so I am not confused as to how to use the application. Estimate: 1 day. Priority: High.
 8. As a user, I would like to be shown the controls for the game, so I can easily play the game. Estimate: 1 day. Priority: Low
 9. As a user, I would like the to be shown a game over screen, so that I know when the game is over. Estiate: 1 day. Priority: Low
+10. As a user, I would like my name and score to be displayed when the game ends, so I know how much I scored. Estimate 1 day: Priority: Medium.
 
 Spike User Stories
 1. As a user, I want to be be able to connect to a server that maintains the game state and user information, to allow me to easily play the game. Priority: High

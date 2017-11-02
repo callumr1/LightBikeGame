@@ -22,6 +22,8 @@ public class Grid extends JPanel implements ActionListener {
     private int dots;
     private int DELAY = 140;
     private Color playerColour = Color.RED;
+    private String playerName = "Player 1";
+    private int score = 0;
 
     private boolean leftDirection = false;
     private boolean rightDirection = true;
@@ -60,6 +62,7 @@ public class Grid extends JPanel implements ActionListener {
         }
         else{
             gameOver(g);
+            paintScore(g);
         }
     }
 
@@ -91,15 +94,35 @@ public class Grid extends JPanel implements ActionListener {
     private void gameOver(Graphics g) {
         //Displays "Game Over"
         String msg = "Game Over";
-        Font small = new Font("Helvetica", Font.BOLD, 30);
+        Font big = new Font("Helvetica", Font.BOLD, 30);
+        FontMetrics metr = getFontMetrics(big);
+
+        g.setColor(Color.white);
+        g.setFont(big);
+        g.drawString(msg, (width - metr.stringWidth(msg)) / 2, height / 2);
+    }
+
+    private void paintScore(Graphics g){
+        String scoreString = Integer.toString(score);
+        String message = (playerName + ": " + scoreString + " points");
+        Font small = new Font("Helvetica", Font.BOLD, 20);
         FontMetrics metr = getFontMetrics(small);
 
         g.setColor(Color.white);
         g.setFont(small);
-        g.drawString(msg, (width - metr.stringWidth(msg)) / 2, height / 2);
+        g.drawString(message, (width - metr.stringWidth(message)) / 2, (height / 2) + 50);
     }
 
     private void move() {
+
+        if(boostOn){
+            score += 2;
+        }
+
+        else if (!boostOn){
+            score += 1;
+        }
+
 
         for (int z = dots; z > 0; z--) {
             x[z] = x[(z - 1)];
@@ -245,6 +268,18 @@ public class Grid extends JPanel implements ActionListener {
         this.playerColour = colour;
     }
 
+    void setPlayerName(String playerName) {
+        //Allow the player to set/change their name
+        this.playerName = playerName;
+    }
+
+    String getPlayerName() {
+        return playerName;
+    }
+
+    int getPlayerScore(){
+        return score;
+    }
 
     void setWidth(int width) {
         //Allows the user to change the width of the grid

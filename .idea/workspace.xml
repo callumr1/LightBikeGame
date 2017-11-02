@@ -8,8 +8,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Grid.java" afterPath="$PROJECT_DIR$/Grid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LightCycles.java" afterPath="$PROJECT_DIR$/LightCycles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CP2406-Assignment1/README.md" afterPath="$PROJECT_DIR$/out/production/CP2406-Assignment1/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,21 +19,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LightCycles.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LightCycles.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LightCycles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-161">
-              <caret line="141" column="57" lean-forward="false" selection-start-line="141" selection-start-column="57" selection-end-line="141" selection-end-column="57" />
+            <state relative-caret-position="369">
+              <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
               <folding>
                 <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
                 <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-                <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-                <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-                <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-                <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-                <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-                <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+                <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+                <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+                <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -44,8 +38,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="286">
+              <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="method#Player#0;class#Player#0" expanded="false" />
                 <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
@@ -56,18 +50,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="227" column="32" lean-forward="false" selection-start-line="227" selection-start-column="32" selection-end-line="227" selection-end-column="32" />
+            <state relative-caret-position="236">
+              <caret line="113" column="5" lean-forward="true" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
               <folding>
                 <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+                <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
                 <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
                 <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
                 <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+                <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
                 <element signature="method#move#0;class#Grid#0" expanded="false" />
                 <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+                <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+                <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+                <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+                <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+                <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+                <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
                 <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
               </folding>
             </state>
@@ -340,12 +342,12 @@
       <workItem from="1509412261205" duration="4940000" />
       <workItem from="1509499477893" duration="625000" />
       <workItem from="1509500284058" duration="2033000" />
-      <workItem from="1509584112812" duration="5099000" />
+      <workItem from="1509584112812" duration="7794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65163000" />
+    <option name="totallyTimeSpent" value="67858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -360,7 +362,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31903946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -388,7 +390,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -400,13 +402,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -430,11 +428,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -459,13 +465,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -489,11 +491,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -518,13 +528,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -548,11 +554,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -577,13 +591,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -607,11 +617,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -636,13 +654,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -678,11 +692,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -695,13 +717,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -725,11 +743,19 @@
           <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -754,13 +780,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -771,11 +793,19 @@
           <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -813,13 +843,9 @@
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -830,11 +856,19 @@
           <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding>
             <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
             <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
             <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
             <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
             <element signature="method#move#0;class#Grid#0" expanded="false" />
             <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
             <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
@@ -900,19 +934,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Tron.zip/Tron/yourclass.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Tron.zip/Tron/ScreenManager.java" />
     <entry file="file://$PROJECT_DIR$/lib/Grids.java" />
-    <entry file="file://$PROJECT_DIR$/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/instructions.jpg" />
     <entry file="jar://$APPLICATION_CONFIG_DIR$/jdks/jbsdk8u112b287.2_windows_x64/jre/lib/rt.jar!/javax/swing/Timer.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -938,36 +959,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Grid.java">
+    <entry file="file://$PROJECT_DIR$/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="227" column="32" lean-forward="false" selection-start-line="227" selection-start-column="32" selection-end-line="227" selection-end-column="32" />
+        <state relative-caret-position="286">
+          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="method#startGame#0;class#Grid#0" expanded="false" />
-            <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
-            <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
-            <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
-            <element signature="method#move#0;class#Grid#0" expanded="false" />
-            <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
-            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Player#0" expanded="false" />
+            <element signature="method#setPlayerControls#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LightCycles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="141" column="57" lean-forward="false" selection-start-line="141" selection-start-column="57" selection-end-line="141" selection-end-column="57" />
+        <state relative-caret-position="369">
+          <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
           <folding>
             <element signature="method#LightCycles#0;class#LightCycles#0" expanded="false" />
             <element signature="method#main#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerName#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerColour#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setGridSize#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerControls#0;class#LightCycles#0" expanded="false" />
-            <element signature="method#setPlayerLimit#0;class#LightCycles#0" expanded="false" />
-            <marker date="1509588960604" expanded="true" signature="7811:7817" ph="{...}" />
+            <element signature="method#addComponentToPane#0;class#LightCycles#0" expanded="false" />
+            <element signature="method#startGame#0;class#LightCycles#0" expanded="false" />
+            <marker date="1509590177403" expanded="true" signature="6698:6704" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="113" column="5" lean-forward="true" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+          <folding>
+            <element signature="method#startGame#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintComponent#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintBike#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintGrid#0;class#Grid#0" expanded="false" />
+            <element signature="method#gameOver#0;class#Grid#0" expanded="false" />
+            <element signature="method#paintScore#0;class#Grid#0" expanded="false" />
+            <element signature="method#move#0;class#Grid#0" expanded="false" />
+            <element signature="method#checkCollision#0;class#Grid#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#Grid#0" expanded="false" />
+            <element signature="method#keyPressed#0;class#TAdapter#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerColour#0;class#Grid#0" expanded="false" />
+            <element signature="method#setPlayerName#0;class#Grid#0" expanded="false" />
+            <element signature="method#setWidth#0;class#Grid#0" expanded="false" />
+            <element signature="method#setHeight#0;class#Grid#0" expanded="false" />
+            <element signature="method#setMaxPlayers#0;class#Grid#0" expanded="false" />
           </folding>
         </state>
       </provider>
