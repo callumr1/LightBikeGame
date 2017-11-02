@@ -110,7 +110,6 @@ public class Grid extends JPanel implements ActionListener {
         for (int i = 0; i < 500; i++){
             trailX[i] = x[0];
             trailY[i] = y[0];
-            System.out.println("x" + trailX[i] + "y" + trailY[i]);
         }
 
 
@@ -139,8 +138,8 @@ public class Grid extends JPanel implements ActionListener {
                 inGame = false;
             }
         }
-        for (int i = 0; i < 500; i++){
-            if ((trailX[i] == x[0]) && (trailY[i] == y[0])){
+        for (int i = 0; i < trailX.length; i++){
+            if ((x[0] == trailX[i]) && (y[0] == trailY[i])){
                 inGame = false;
             }
         }
@@ -227,7 +226,6 @@ public class Grid extends JPanel implements ActionListener {
 
         if (key == KeyEvent.VK_SPACE) {
             //speeds up the bike
-            System.out.print("Space");
             if (boostOn){
                 DELAY = 140;
                 timer.setDelay(DELAY);

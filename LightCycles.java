@@ -130,22 +130,21 @@ public class LightCycles extends JFrame implements ActionListener {
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         menu.add(title);
-        menu.add(Box.createRigidArea(new Dimension(0,20))); //adds space between the buttons
+        menu.add(Box.createRigidArea(new Dimension(0,20))); //adds space between the elements
         menu.add(playGame);
-        menu.add(Box.createRigidArea(new Dimension(0,40)));
+        menu.add(Box.createRigidArea(new Dimension(0,40))); //adds space between the elements
         menu.add(exitGame);
 
         //creates the options card
         JPanel options = new JPanel();
         options.setBackground(Color.BLACK);
-        Container con = new Container();
-        Container colourCon = new Container();
-        con.setLayout(new BoxLayout(con, BoxLayout.PAGE_AXIS));
-        colourCon.setLayout(new FlowLayout());
-        options.add(con);
-        con.add(colourCon);
+        options.setLayout(new BoxLayout(options, BoxLayout.PAGE_AXIS));
+        options.add(Box.createRigidArea(new Dimension(0,50))); //adds space between the elements
 
-        JLabel colourLabel = new JLabel(("Pick your Bike Colour:"));
+        Container colourCon = new Container();
+        colourCon.setLayout(new FlowLayout());
+        options.add(colourCon);
+        JLabel colourLabel = new JLabel("Pick your Bike Colour:");
         colourLabel.setFont(smallFont);
         colourLabel.setForeground(Color.WHITE);
         colourCon.add(colourLabel);
@@ -153,6 +152,18 @@ public class LightCycles extends JFrame implements ActionListener {
         colourCon.add(blue);
         colourCon.add(green);
         colourCon.add(yellow);
+
+        Container nameCon = new Container();
+        nameCon.setLayout(new FlowLayout());
+        options.add(nameCon);
+        JLabel nameLabel = new JLabel("Pick your Name: ");
+        nameLabel.setFont(smallFont);
+        nameLabel.setForeground(Color.WHITE);
+        JTextField nameField = new JTextField("Player 1", 20);
+        nameField.setFont(smallFont);
+        nameCon.add(nameLabel);
+        nameCon.add(nameField);
+
 
         //creates the instructions card
         JPanel instructions = new JPanel();
