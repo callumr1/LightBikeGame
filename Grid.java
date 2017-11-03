@@ -1,3 +1,4 @@
+//GitHub Repository: https://github.com/callumr1/CP2406-Assignment1
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,80 +8,122 @@ import java.awt.event.KeyEvent;
 
 public class Grid extends JPanel implements ActionListener {
 
-    private int width = 550;
-    private int height = 550;
     private int gridHeight = 500;
     private int gridWidth = 500;
-    private int maxPlayers;
-    private int minPlayers;
+    private int height = gridHeight + 50;
+    private int width = gridWidth + 50;
     private final int dot_size = 10;
-    private final int total_dots = 2500;
-    private int x[] = new int[total_dots];
-    private int y[] = new int[total_dots];
-    private int trailX[] = new int[total_dots];
-    private int trailY[] = new int[total_dots];
-    private int dots;
-    private int DELAY = 140;
-    private Color playerColour = Color.RED;
-    private String playerName = "Player 1";
-    private int score = 0;
-
-    private boolean leftDirection = false;
-    private boolean rightDirection = true;
-    private boolean upDirection = false;
-    private boolean downDirection = false;
+    private final int total_dots = (gridWidth * gridHeight)/(dot_size*dot_size);
     private boolean inGame = true;
-    private boolean boostOn = false;
-    private Timer timer;
+    private int players = 1;
+    private int win = 500;
+
+    //Player 1 variables
+    private int pOneX[] = new int[total_dots];
+    private int pOneY[] = new int[total_dots];
+    private int pOneDots;
+    private int pOneDELAY = 140;
+    private Color pOneColour = Color.RED;
+    private String pOneName = "Player 1";
+    private int pOneScore = 0;
+    private boolean pOneLeft = false;
+    private boolean pOneRight = true;
+    private boolean pOneUp = false;
+    private boolean pOneDown = false;
+    private boolean pOneBoostOn = false;
+    private Timer pOneTimer;
+
+    //Player 2 variables
+    private int pTwoX[] = new int[total_dots];
+    private int pTwoY[] = new int[total_dots];
+    private int pTwoDots;
+    private int pTwoDELAY = 140;
+    private Color pTwoColour = Color.PINK;
+    private String pTwoName = "Player 2";
+    private int pTwoScore = 0;
+    private boolean pTwoLeft = true;
+    private boolean pTwoRight = false;
+    private boolean pTwoUp = false;
+    private boolean pTwoDown = false;
+    private boolean pTwoBoostOn = false;
+    private Timer pTwoTimer;
 
     Grid(){
-        maxPlayers = 20;
-        minPlayers = 3;
         addKeyListener(new TAdapter());
         setFocusable(true);
         setPreferredSize(new Dimension(width, height));
-        //startGame();
     }
 
     void startGame(){
-        dots = 3;
-        for (int z = 0; z < dots; z++) {
-            x[z] = 50 - z * 10;
-            y[z] = 50;
+        //If it is a single player game
+        pOneDots = 3;
+        for (int z = 0; z < pOneDots; z++) {
+            pOneX[z] = 50 - z * 10;
+            pOneY[z] = 50;
         }
+        pOneTimer = new Timer(pOneDELAY, this);
+        pOneTimer.start();
 
-        timer = new Timer(DELAY, this);
-        timer.start();
-
+        //If it is a two player game
+        if(players == 2){
+            pTwoDots = 3;
+            for (int z = 0; z < pTwoDots; z++) {
+                pTwoX[z] = (gridWidth - 20) - z * 10;
+                pTwoY[z] = (gridHeight - 40);
+            }
+            pTwoTimer = new Timer(pTwoDELAY, this);
+            pTwoTimer.start();
+        }
     }
 
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         if (inGame) {
             paintGrid(g);
-            paintBike(g);
+            paintBike1(g);
+            if(players == 2) {
+                paintBike2(g);
+            }
         }
         else{
+            paintBack(g);
             gameOver(g);
-            paintScore(g);
+            paintScore1(g);
+            if(players == 2) {
+                paintScore2(g);
+            }
         }
     }
 
-    private void paintBike(Graphics bike) {
+    private void paintBike1(Graphics bike) {
 
-        for (int z = 0; z < dots; z++) {
+        for (int z = 0; z < pOneDots; z++) {
             if (z == 0) {
                 //draw the bike
-                bike.setColor(playerColour);
-                bike.fillRect(x[z], y[z], 10, 10);
+                bike.setColor(pOneColour);
+                bike.fillRect(pOneX[z], pOneY[z], 10, 10);
             }
             else {
                 //draw trail
-                bike.setColor(playerColour);
-                bike.fillRect(x[z], y[z], 10, 10);
+                bike.setColor(pOneColour);
+                bike.fillRect(pOneX[z], pOneY[z], 10, 10);
             }
         }
+    }
 
+    private void paintBike2(Graphics bike) {
+        for (int z = 0; z < pTwoDots; z++) {
+            if (z == 0) {
+                //draw the bike
+                bike.setColor(pTwoColour);
+                bike.fillRect(pTwoX[z], pTwoY[z], 10, 10);
+            }
+            else {
+                //draw trail
+                bike.setColor(pTwoColour);
+                bike.fillRect(pTwoX[z], pTwoY[z], 10, 10);
+            }
+        }
     }
 
     private void paintGrid(Graphics g) {
@@ -102,9 +145,9 @@ public class Grid extends JPanel implements ActionListener {
         g.drawString(msg, (width - metr.stringWidth(msg)) / 2, height / 2);
     }
 
-    private void paintScore(Graphics g){
-        String scoreString = Integer.toString(score);
-        String message = (playerName + ": " + scoreString + " points");
+    private void paintScore1(Graphics g){
+        String scoreString = Integer.toString(pOneScore);
+        String message = (pOneName + ": " + scoreString + " points");
         Font small = new Font("Helvetica", Font.BOLD, 20);
         FontMetrics metr = getFontMetrics(small);
 
@@ -113,90 +156,168 @@ public class Grid extends JPanel implements ActionListener {
         g.drawString(message, (width - metr.stringWidth(message)) / 2, (height / 2) + 50);
     }
 
+    private void paintScore2(Graphics g){
+        String scoreString = Integer.toString(pTwoScore);
+        String message = (pTwoName + ": " + scoreString + " points");
+        Font small = new Font("Helvetica", Font.BOLD, 20);
+        FontMetrics metr2 = getFontMetrics(small);
+
+        g.setColor(Color.white);
+        g.setFont(small);
+        g.drawString(message, (width - metr2.stringWidth(message)) / 2, (height / 2) + 100);
+    }
+
+    private void paintBack(Graphics g){
+        //paints a black box so you can read the game over text better
+        g.setColor(Color.BLACK);
+        g.fillRect((width/2) - 100, (height/2) - 60, 200, 200);
+    }
+
     private void move() {
 
-        if(boostOn){
-            score += 2;
+        pOneDots++;
+
+        if(pOneBoostOn){
+            pOneScore += 2;
         }
 
-        else if (!boostOn){
-            score += 1;
+        else if (!pOneBoostOn){
+            pOneScore += 1;
         }
 
-
-        for (int z = dots; z > 0; z--) {
-            x[z] = x[(z - 1)];
-            y[z] = y[(z - 1)];
+        for (int z = pOneDots; z > 0; z--) {
+            pOneX[z] = pOneX[(z - 1)];
+            pOneY[z] = pOneY[(z - 1)];
         }
 
-        //remembers where the trail is so that collisions can be done
-        for (int i = 0; i < 500; i++){
-            trailX[i] = x[0];
-            trailY[i] = y[0];
+        if (pOneLeft) {
+            pOneX[0] -= dot_size;
         }
 
-
-        if (leftDirection) {
-            x[0] -= dot_size;
+        if (pOneRight) {
+            pOneX[0] += dot_size;
         }
 
-        if (rightDirection) {
-            x[0] += dot_size;
+        if (pOneUp) {
+            pOneY[0] -= dot_size;
         }
 
-        if (upDirection) {
-            y[0] -= dot_size;
+        if (pOneDown) {
+            pOneY[0] += dot_size;
         }
 
-        if (downDirection) {
-            y[0] += dot_size;
+        //if its two player, this looks after moving the second player
+        if(players == 2){
+            pTwoDots++;
+
+            if(pTwoBoostOn){
+                pTwoScore += 2;
+            }
+
+            else if (!pTwoBoostOn){
+                pTwoScore += 1;
+            }
+
+
+            for (int z = pTwoDots; z > 0; z--) {
+                pTwoX[z] = pTwoX[(z - 1)];
+                pTwoY[z] = pTwoY[(z - 1)];
+            }
+
+            if (pTwoLeft) {
+                pTwoX[0] -= dot_size;
+            }
+
+            if (pTwoRight) {
+                pTwoX[0] += dot_size;
+            }
+
+            if (pTwoUp) {
+                pTwoY[0] -= dot_size;
+            }
+
+            if (pTwoDown) {
+                pTwoY[0] += dot_size;
+            }
         }
     }
 
     private void checkCollision() {
-
-        for (int z = gridWidth; z > 0; z--) {
-            //System.out.println(z);
-            if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
-                inGame = false;
-            }
-        }
-        for (int i = 0; i < trailX.length; i++){
-            if ((x[0] == trailX[i]) && (y[0] == trailY[i])){
+        //checks to see if player 1's bike collides with a jet wall or a border
+        for (int z = pOneDots; z > 0; z--) {
+            if ((z > 4) && (pOneX[0] == pOneX[z]) && (pOneY[0] == pOneY[z])) {
+                pTwoScore += win;
                 inGame = false;
             }
         }
 
-       /* for (int i = 0; i < 500; i += 10){
-            System.out.println(x[i]);
-            System.out.println(x[0]);
-            if ((x[i] == x[0]) && (y[i] == y[0]))
-                inGame = false;
-        }*/
-
-        /*for (int z = dots; z < y.length; z++){
-            if ((z > 4) && (y[z] == y[0]))
-                inGame = false;
-        }*/
-
-        if (y[0] >= gridHeight) {
+        if (pOneY[0] >= gridHeight) {
+            pTwoScore += win;
             inGame = false;
         }
 
-        if (y[0] < 20) {
+        if (pOneY[0] < 20) {
+            pTwoScore += win;
             inGame = false;
         }
 
-        if (x[0] >= gridWidth) {
+        if (pOneX[0] >= gridWidth) {
+            pTwoScore += win;
             inGame = false;
         }
 
-        if (x[0] < 20) {
+        if (pOneX[0] < 20) {
+            pTwoScore += win;
             inGame = false;
         }
 
         if(!inGame) {
-            timer.stop();
+            pOneTimer.stop();
+        }
+
+        if(players == 2) {
+            //checks to see if player 2's bike collides with a jet wall or a border
+            //checks for collision with own wall
+            for (int z = pTwoDots; z > 0; z--) {
+                if ((z > 4) && (pTwoX[0] == pTwoX[z]) && (pTwoY[0] == pTwoY[z])) {
+                    pOneScore += win;
+                    inGame = false;
+                } else if ((z > 4) && (pTwoX[0] == pOneX[z]) && (pTwoY[0] == pOneY[z])) {
+                    pOneScore += win;
+                    inGame = false;
+                }
+                //checks for player 1 collision with player 2 jetwall
+                else if ((z > 4) && (pOneX[0] == pTwoX[z]) && (pOneY[0] == pTwoY[z])) {
+                    pTwoScore += win;
+                    inGame = false;
+                }
+            }
+
+            if (pTwoY[0] >= gridHeight) {
+                pOneScore += win;
+                inGame = false;
+            }
+
+            if (pTwoY[0] < 20) {
+                pOneScore += win;
+                inGame = false;
+            }
+
+            if (pTwoX[0] >= gridWidth) {
+                pOneScore += win;
+                inGame = false;
+            }
+
+            if (pTwoX[0] < 20) {
+                pOneScore += win;
+                inGame = false;
+
+            }
+
+            if (!inGame && players == 2) {
+                pOneTimer.stop();
+                pTwoTimer.stop();
+            }
         }
     }
 
@@ -219,102 +340,138 @@ public class Grid extends JPanel implements ActionListener {
 
         int key = e.getKeyCode();
 
-        if ((key == KeyEvent.VK_LEFT) && (!rightDirection)) {
+        if ((key == KeyEvent.VK_LEFT) && (!pOneRight)) {
             //left key
-            leftDirection = true;
-            upDirection = false;
-            downDirection = false;
+            pOneLeft = true;
+            pOneUp = false;
+            pOneDown = false;
         }
 
-        if ((key == KeyEvent.VK_RIGHT) && (!leftDirection)) {
+        if ((key == KeyEvent.VK_RIGHT) && (!pOneLeft)) {
             //right key
-            rightDirection = true;
-            upDirection = false;
-            downDirection = false;
+            pOneRight = true;
+            pOneUp = false;
+            pOneDown = false;
         }
 
-        if ((key == KeyEvent.VK_UP) && (!downDirection)) {
+        if ((key == KeyEvent.VK_UP) && (!pOneDown)) {
             //up key
-            upDirection = true;
-            rightDirection = false;
-            leftDirection = false;
+            pOneUp = true;
+            pOneRight = false;
+            pOneLeft = false;
         }
 
-        if ((key == KeyEvent.VK_DOWN) && (!upDirection)) {
+        if ((key == KeyEvent.VK_DOWN) && (!pOneUp)) {
             //down key
-            downDirection = true;
-            rightDirection = false;
-            leftDirection = false;
+            pOneDown = true;
+            pOneRight = false;
+            pOneLeft = false;
         }
 
         if (key == KeyEvent.VK_SPACE) {
             //speeds up the bike
-            if (boostOn){
-                DELAY = 140;
-                timer.setDelay(DELAY);
-                boostOn = false;
+            if (pOneBoostOn){
+                pOneDELAY = 140;
+                pOneTimer.setDelay(pOneDELAY);
+                pOneBoostOn = false;
             }
             else {
-                DELAY = 70;
-                timer.setDelay(DELAY);
-                boostOn = true;
+                pOneDELAY = 70;
+                pOneTimer.setDelay(pOneDELAY);
+                pOneBoostOn = true;
+            }
+        }
+        if(players == 2){
+            if ((key == KeyEvent.VK_A) && (!pTwoRight)) {
+                //left key for player 2
+                pTwoLeft = true;
+                pTwoUp = false;
+                pTwoDown = false;
+            }
+
+            if ((key == KeyEvent.VK_D) && (!pTwoLeft)) {
+                //right key for player 2
+                pTwoRight = true;
+                pTwoUp = false;
+                pTwoDown = false;
+            }
+
+            if ((key == KeyEvent.VK_W) && (!pTwoDown)) {
+                //up key for player 2
+                pTwoUp = true;
+                pTwoRight = false;
+                pTwoLeft = false;
+            }
+
+            if ((key == KeyEvent.VK_S) && (!pTwoUp)) {
+                //down key for player 2
+                pTwoDown = true;
+                pTwoRight = false;
+                pTwoLeft = false;
+            }
+
+            if (key == KeyEvent.VK_SHIFT) {
+                //speeds up the bike for player 2
+                if (pTwoBoostOn){
+                    pTwoDELAY = 140;
+                    pTwoTimer.setDelay(pTwoDELAY);
+                    pTwoBoostOn = false;
+                }
+                else {
+                    pTwoDELAY = 70;
+                    pTwoTimer.setDelay(pTwoDELAY);
+                    pTwoBoostOn = true;
+                }
             }
         }
         }
     }
 
-    void setPlayerColour(Color colour){
+    void setpOneColour(Color colour){
         //Allows the user to change the colour of their bike
-        this.playerColour = colour;
+        this.pOneColour = colour;
     }
 
-    void setPlayerName(String playerName) {
+    void setpOneName(String name) {
         //Allow the player to set/change their name
-        this.playerName = playerName;
+        this.pOneName = name;
     }
 
-    String getPlayerName() {
-        return playerName;
+    void setpTwoColour(Color colour){
+        //Allows the user to change the colour of their bike
+        this.pTwoColour = colour;
     }
 
-    int getPlayerScore(){
-        return score;
+    void setpTwoName(String name) {
+        //Allow the player to set/change their name
+        this.pTwoName = name;
     }
 
-    void setWidth(int width) {
-        //Allows the user to change the width of the grid
-        this.width = width;
-        System.out.println("The width of the Grid is now set to " + width);
+    String getpOneName() {
+        return pOneName;
+    }
+
+    String getpTwoName() {
+        return pTwoName;
+    }
+
+    void setGridSize(int size) {
+        //Allows the user to change the size of the grid
+        this.gridWidth = size;
+        this.gridHeight = size;
+        this.width = gridWidth + 50;
+        this.height = gridHeight + 50;
     }
 
     public int getWidth() {
         return width;
     }
 
-    void setHeight(int height) {
-        //Allows the user to change the height of the grid
-        this.height = height;
-        System.out.println("The height of the Grid is now set to " + height);
-    }
-
     public int getHeight() {
         return height;
     }
 
-    void setMaxPlayers(int maxPlayers) {
-        this.maxPlayers = maxPlayers;
-        System.out.println("The maximum number of players is now set to " + maxPlayers);
-    }
-
-    public int getMaxPlayers() {
-        return maxPlayers;
-    }
-
-    public void setMinPlayers(int minPlayers) {
-        this.minPlayers = minPlayers;
-    }
-
-    public int getMinPlayers() {
-        return minPlayers;
+    void setGameMode(int answer){
+        players = answer;
     }
 }
